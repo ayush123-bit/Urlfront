@@ -24,7 +24,7 @@ const HashUrlForm = () => {
     setHashedUrl('');
 
     try {
-      const response = await axios.post('http://localhost:5000/hash-url', { url });
+      const response = await axios.post('https://urlback-r1pt.onrender.com/hash-url', { url });
       const { hashedUrl } = response.data;
 
       // Store the hashed URL
@@ -32,7 +32,7 @@ const HashUrlForm = () => {
 
       // Show success notification
       Toastify({
-        text: `URL hashed successfully: http://localhost:5000/${hashedUrl}`,
+        text: `URL hashed successfully: https://urlback-r1pt.onrender.com/${hashedUrl}`,
         backgroundColor: 'green',
         className: 'info',
       }).showToast();
